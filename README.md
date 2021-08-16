@@ -1,12 +1,12 @@
 # django-admin-searchable-dropdown
 
-A Django admin filter implementation that renders as a dropdown.
+A Django admin filter implementation that renders as a searchable select field dropdown.
 
-If you have more than ten values for a field that you want to filter by in
-Django admin, the filtering sidebar gets long, cluttered and hard to use.
+If you have more than twenty values for a field that you want to filter by in
+Django admin, the filtering sidebar gets long, cluttered, sometimes wide and hence, hard to use.
 
 This app contains the `DropdownFilter` class that renders as a drop-down in the
-filtering sidebar to avoid this problem.
+filtering sidebar that can be searched to avoid this problem.
 
 # Usage
 
@@ -21,7 +21,7 @@ Enable in `settings.py`:
 ```py
 INSTALLED_APPS = (
     ...
-    'django_admin_listfilter_dropdown',
+    'django_admin_searchable_dropdown',
     ...
 )
 
@@ -30,17 +30,17 @@ INSTALLED_APPS = (
 Use in `admin.py`:
 
 ```py
-from django_admin_listfilter_dropdown.filters import DropdownFilter, RelatedDropdownFilter, ChoiceDropdownFilter
+from django_admin_searchable_dropdown.filters import DropdownFilter, RelatedDropdownFilter, ChoiceDropdownFilter
 
 class EntityAdmin(admin.ModelAdmin):
     ...
     list_filter = (
-        # for ordinary fields
-        ('a_charfield', DropdownFilter),
+        # for normal fields
+        ('any_charfield', DropdownFilter),
         # for choice fields
-        ('a_choicefield', ChoiceDropdownFilter),
+        ('any_choicefield', ChoiceDropdownFilter),
         # for related fields
-        ('a_foreignkey_field', RelatedDropdownFilter),
+        ('any_foreignkey_field', RelatedDropdownFilter),
     )
 ```
 
@@ -48,7 +48,7 @@ Example of a custom filter that uses the provided template:
 
 ```py
 class CustomFilter(SimpleListFilter):
-    template = 'django_admin_listfilter_dropdown/dropdown_filter.html'
+    template = 'django_admin_searchable_dropdown/dropdown_filter.html'
 
     def lookups(self, request, model_admin):
         ...
@@ -61,9 +61,10 @@ class CustomFilter(SimpleListFilter):
 
 Here's what it looks like:
 
-![Screenshot of dropdown admin filter](https://raw.githubusercontent.com/mrts/django-admin-list-filter-dropdown/master/docs/list-filter-dropdown.png)
+![Screenshot of searchable dropdown admin filter](https://raw.githubusercontent.com/mrts/django-admin-list-filter-dropdown/master/docs/list-filter-dropdown.png)
 
 # Credits
 
 Based on [this StackOverflow question](http://stackoverflow.com/a/20900314/258772) and
-[code from FeinCMS](https://github.com/feincms/feincms/blob/master/feincms/templates/admin/filter.html).
+[code from FeinCMS](https://github.com/feincms/feincms/blob/master/feincms/templates/admin/filter.html) and
+[code from mrts](https://github.com/mrts/django-admin-list-filter-dropdown/blob/8ab1575dcd3cb9b28a80cc07695cec65fa85dfad/django_admin_listfilter_dropdown/templates/django_admin_listfilter_dropdown/dropdown_filter.html).
