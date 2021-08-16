@@ -3,6 +3,7 @@
 var search_field = '';
 function searchOptions(val){
     search_field = val.target.value;
+    console.log("search_field:" + search_field)
 }
 </script>
 <h3>{% blocktrans with title as filter_title %} By {{ filter_title }} {% endblocktrans %}</h3>
@@ -13,10 +14,10 @@ function searchOptions(val){
         onchange="go_from_select(this.options[this.selectedIndex].value)">
         <option><input type="text" onchange="e => searchOptions(e)"></option>
     {% for choice in choices %}
-        {% if choice.display.includes(search_field) %}
+        <!-- {% if choice.display.includes(search_field) %} -->
         <option{% if choice.selected %} selected="selected"{% endif %}
          value="{{ choice.query_string|iriencode }}">{{ choice.display }}</option>
-        {% endif %}
+        <!-- {% endif %} -->
     {% endfor %}
     </select>
     </li>
