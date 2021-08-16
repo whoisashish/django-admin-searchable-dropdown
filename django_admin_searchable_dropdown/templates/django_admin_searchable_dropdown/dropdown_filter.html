@@ -14,10 +14,8 @@ function searchOptions(val){
         onchange="go_from_select(this.options[this.selectedIndex].value)">
         <option><input type="text" onchange="e => searchOptions(e)"></option>
     {% for choice in choices %}
-        <!-- {% if choice.display.includes(search_field) %} -->
         <option{% if choice.selected %} selected="selected"{% endif %}
          value="{{ choice.query_string|iriencode }}">{{ choice.display }}</option>
-        <!-- {% endif %} -->
     {% endfor %}
     </select>
     </li>
