@@ -12,7 +12,7 @@ function searchOptions(val){
     <li>
     <select class="form-control" style="width: 95%;margin-left: 2%;"
         onchange="go_from_select(this.options[this.selectedIndex].value)">
-        <option><input type="text" onchange="e => searchOptions(e)"></option>
+        <!-- <option><input type="text" onchange="e => searchOptions(e)"></option> -->
     {% for choice in choices %}
         <option{% if choice.selected %} selected="selected"{% endif %}
          value="{{ choice.query_string|iriencode }}">{{ choice.display }}</option>
