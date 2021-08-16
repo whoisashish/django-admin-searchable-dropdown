@@ -8,6 +8,13 @@ Django admin, the filtering sidebar gets long, cluttered, sometimes wide and hen
 This app contains the `DropdownFilter` class that renders as a drop-down in the
 filtering sidebar that can be searched to avoid this problem.
 
+# Example
+
+Here's what it looks like:
+
+![Screenshot of searchable dropdown admin filter](https://raw.githubusercontent.com/mrts/django-admin-list-filter-dropdown/master/docs/list-filter-dropdown.png)
+
+
 # Usage
 
 Install:
@@ -56,12 +63,6 @@ class CustomFilter(SimpleListFilter):
     def queryset(self, request, queryset):
         ...
 ```
-
-# Example
-
-Here's what it looks like:
-
-![Screenshot of searchable dropdown admin filter](https://raw.githubusercontent.com/mrts/django-admin-list-filter-dropdown/master/docs/list-filter-dropdown.png)
 
 # Credits
 
