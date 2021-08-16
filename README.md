@@ -1,0 +1,1 @@
+# django-admin-searchable-dropdown
