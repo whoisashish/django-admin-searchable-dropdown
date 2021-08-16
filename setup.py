@@ -3,7 +3,7 @@
 import os
 from setuptools import find_packages, setup
 
-VERSION = '1.0.0'
+VERSION = '1.0.1'
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
