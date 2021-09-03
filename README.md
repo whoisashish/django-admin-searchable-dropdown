@@ -35,7 +35,7 @@ Installation:
 You can install it via pip.  To get the latest version clone this repo.
 
 ```shell script
-pip install django-admin-autocomplete-filter
+pip install django-admin-searchable-dropdown
 ```
 
 Add `admin_searchable_dropdown` to your `INSTALLED_APPS` inside settings.py of your project.
