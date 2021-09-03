@@ -18,7 +18,7 @@ class AutocompleteSelect(Base):
 
 
 class AutocompleteFilter(admin.SimpleListFilter):
-    template = 'django-admin-autocomplete-filter/autocomplete-filter.html'
+    template = 'django-admin-searchable-dropdown/autocomplete-filter.html'
     title = ''
     field_name = ''
     field_pk = 'pk'
@@ -32,11 +32,11 @@ class AutocompleteFilter(admin.SimpleListFilter):
     class Media:
         js = (
             'admin/js/jquery.init.js',
-            'django-admin-autocomplete-filter/js/autocomplete_filter_qs.js',
+            'django-admin-searchable-dropdown/js/autocomplete_filter_qs.js',
         )
         css = {
             'screen': (
-                'django-admin-autocomplete-filter/css/autocomplete-fix.css',
+                'django-admin-searchable-dropdown/css/autocomplete-fix.css',
             ),
         }
 
