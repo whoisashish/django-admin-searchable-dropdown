@@ -1,4 +1,4 @@
-[![PyPI version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=py&r=r&type=6e&v=1.0&x2=0)](https://badge.fury.io/py/django-admin-searchable-dropdown)
+[![PyPI version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=py&r=r&type=6e&v=1.2&x2=0)](https://pypi.org/project/django-admin-searchable-dropdown/1.2/)
 
 Django Admin Searchable Dropdown
 ================================
