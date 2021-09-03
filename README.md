@@ -1,6 +1,5 @@
 [![PyPI version](https://badge.fury.io/py/django-admin-searchable-dropdown.svg?kill_cache=1)](https://badge.fury.io/py/django-admin-searchable-dropdown)
 
-
 Django Admin Searchable Dropdown
 ================================
 A Django admin filter implementation that renders as a searchable select field dropdown.
@@ -80,9 +79,9 @@ class CarModelAdmin(admin.ModelAdmin):
 
 After following these steps you may see the filter as:
 
-![](https://raw.githubusercontent.com/whoisashish/django-admin-searchable-dropdown/master/admin_searchable_dropdown/media/screenshot1.png)
+![](https://raw.githubusercontent.com/whoisashish/django-admin-searchable-dropdown/master/admin_searchable_dropdown/media/UnFiltered.png)
 
-![](https://raw.githubusercontent.com/whoisashish/django-admin-searchable-dropdown/master/admin_searchable_dropdown/media/screenshot2.png)
+![](https://raw.githubusercontent.com/whoisashish/django-admin-searchable-dropdown/master/admin_searchable_dropdown/media/Filtered.png)
 
 
 Functionality to provide a custom view for search:
