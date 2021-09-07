@@ -146,7 +146,8 @@ It's also possible to use the `AutocompleteFilterFactory` shortcut to create
 filters on the fly, as shown below. Nested relations are supported too, with
 no need to specify the model.
 
-```An autocomplete widget filter with a customizable title. Use like this:
+```
+An autocomplete widget filter with a customizable title. Use like this:
         AutocompleteFilterFactory('My title', 'field_name')
         AutocompleteFilterFactory('My title', 'fourth__third__second__first')
     Be sure to include distinct in the model admin get_queryset() if the second form is used.
@@ -156,7 +157,8 @@ no need to specify the model.
         * viewname: The name of the custom AutocompleteJsonView URL to use, if any.
         * use_pk_exact: Whether to use '__pk__exact' in the parameter name when possible.
         * label_by: How to generate the static label for the widget - a callable, the name
-          of a model callable, or the name of a model field.```
+          of a model callable, or the name of a model field.
+```
 
 Example:
 
